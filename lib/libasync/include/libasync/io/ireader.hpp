@@ -10,7 +10,8 @@
 #define IREADER_HPP_
 
 #include <string>
-#include "utils/subject.hpp"
+
+#include <libasync/utils/subject.hpp>
 
 /** @brief The namespace of the BULKMT project */
 namespace bulkmt {

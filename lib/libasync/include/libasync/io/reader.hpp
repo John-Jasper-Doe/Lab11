@@ -15,7 +15,7 @@
 #ifndef READER_HPP_
 #define READER_HPP_
 
-#include "ireader.hpp"
+#include <libasync/io/ireader.hpp>
 
 /** @brief The namespace of the BULKMT project */
 namespace bulkmt {

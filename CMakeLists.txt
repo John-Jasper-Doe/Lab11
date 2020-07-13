@@ -30,9 +30,11 @@ add_compile_options(-Wall -Werror -Wextra -Wpedantic -g -O0)
 # Setting up a project.
 include(print)
 include(function)
+include(GNUInstallDirs)
 
 project(${PROJECT_NAME} CXX)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 set(LIBRARY_INCLUDE_PATH ${CMAKE_SOURCE_DIR}/lib/libasync/include)
 include_directories(${LIBRARY_INCLUDE_PATH})
 
@@ -71,7 +73,6 @@ endif()
 #add_subdirectory(src)
 add_subdirectory(lib)
 
-include(GNUInstallDirs)
 configure_file(async.pc.in ${CMAKE_CURRENT_BINARY_DIR}/async.pc @ONLY)
 install(FILES ${CMAKE_BINARY_DIR}/async.pc DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/pkgconfig)
 

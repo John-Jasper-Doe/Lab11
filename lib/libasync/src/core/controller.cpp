@@ -6,11 +6,12 @@
  * @date 2020
  */
 
-#include "controller.hpp"
 #include <iostream>
-#include "common/counter.hpp"
-#include "io/conlogger.hpp"
-#include "io/filelogger.hpp"
+
+#include <libasync/core/controller.hpp>
+#include <libasync/common/counter.hpp>
+#include <libasync/io/conlogger.hpp>
+#include <libasync/io/filelogger.hpp>
 
 /** @brief The namespace of the BULKMT project */
 namespace bulkmt {

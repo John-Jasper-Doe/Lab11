@@ -4,16 +4,15 @@ set(CMAKE_FOLDER "${CMAKE_FOLDER}/libasync")
 
 file(GLOB_RECURSE ALL_CXX_SOURCE_FILES *.cpp *.cxx)
 
-add_library(${PROJECT_NAME} ${ALL_CXX_SOURCE_FILES})
+add_library(${PROJECT_NAME} SHARED ${ALL_CXX_SOURCE_FILES})
 target_include_directories(${PROJECT_NAME} PRIVATE ${LIBRARY_INCLUDE_PATH})
 target_link_libraries(${PROJECT_NAME}
   pthread
 )
 
-
 set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER ${LIBRARY_INCLUDE_PATH}/async/async.h)
 
-# install to bin folder our binaries
+# install
 install(
   TARGETS ${PROJECT_NAME}
   LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}

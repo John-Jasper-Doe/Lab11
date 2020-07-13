@@ -6,8 +6,9 @@
  * @date 2020
  */
 
-#include "reader.hpp"
 #include <istream>
+
+#include <libasync/io/reader.hpp>
 
 /** @brief The namespace of the BULKMT project */
 namespace bulkmt {

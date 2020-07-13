@@ -6,11 +6,12 @@
  * @date 2020
  */
 
-#include "filelogger.hpp"
 #include <fstream>
 #include <iostream>
 #include <sstream>
 #include <thread>
+
+#include <libasync/io/filelogger.hpp>
 
 /** @brief The namespace of the BULKMT project */
 namespace bulkmt {

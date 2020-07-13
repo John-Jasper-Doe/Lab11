@@ -14,8 +14,9 @@
 
 #include <chrono>
 #include <string>
-#include "common/counter.hpp"
-#include "io/ilogger.hpp"
+
+#include <libasync/common/counter.hpp>
+#include <libasync/io/ilogger.hpp>
 
 /** @brief The namespace of the BULKMT project */
 namespace bulkmt {

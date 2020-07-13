@@ -6,7 +6,7 @@
  * @date 2020
  */
 
-#include "conlogger.hpp"
+#include <libasync/io/conlogger.hpp>
 
 /** @brief The namespace of the BULKMT project */
 namespace bulkmt {

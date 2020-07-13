@@ -15,11 +15,12 @@
 
 #include <memory>
 #include <string>
-#include "common/cmdpool.hpp"
-#include "common/counter.hpp"
-#include "common/taskpool.hpp"
-#include "io/ireader.hpp"
-#include "utils/observer.hpp"
+
+#include <libasync/common/cmdpool.hpp>
+#include <libasync/common/counter.hpp>
+#include <libasync/common/taskpool.hpp>
+#include <libasync/io/ireader.hpp>
+#include <libasync/utils/observer.hpp>
 
 /** @brief The namespace of the BULKMT project */
 namespace bulkmt {

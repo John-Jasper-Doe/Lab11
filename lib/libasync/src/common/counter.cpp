@@ -6,7 +6,7 @@
  * @date 2020
  */
 
-#include "counter.hpp"
+#include <libasync/common/counter.hpp>
 
 /** @brief The namespace of the BULKMT project */
 namespace bulkmt {
