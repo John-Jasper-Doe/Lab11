@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
-#include <ostream>
 #include <libasync/common/counter.hpp>
 #include <libasync/common/taskpool.hpp>
 #include <libasync/io/ilogger.hpp>
+#include <ostream>
 
 class test_loger : public libasync::io::ilogger {
   std::ostream& ostrm_;

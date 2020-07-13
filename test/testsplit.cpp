@@ -1,15 +1,13 @@
 #include <gtest/gtest.h>
-#include <string>
 #include <regex>
+#include <string>
 
 namespace {
 
 std::vector<std::string> split(const std::string& str) {
   std::regex ws_re("\\n+");
-  return std::vector<std::string> {
-    std::sregex_token_iterator(str.begin(), str.end(), ws_re, -1),
-    std::sregex_token_iterator()
-  };
+  return std::vector<std::string>{std::sregex_token_iterator(str.begin(), str.end(), ws_re, -1),
+                                  std::sregex_token_iterator()};
 }
 
 } /* :: */

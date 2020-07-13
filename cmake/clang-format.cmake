@@ -4,8 +4,10 @@ file(GLOB_RECURSE
   ALL_CXX_SOURCE_FILES
   src/*.[ch]pp
   src/*.[ch]
-  test/*.[ch]pp
-  test/*.[ch]
+  lib/*.[ch]pp
+  lib/*.[ch]
+#  test/*.[ch]pp
+#  test/*.[ch]
 )
 
 # Adding clang-format target if executable is found

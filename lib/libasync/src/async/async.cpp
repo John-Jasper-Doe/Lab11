@@ -1,4 +1,11 @@
-#include <libasync/async/async.h>
+/**
+ * @file async.cpp
+ * @brief Async functions for work with library..
+ *
+ * @date 2020
+ */
+
+#include <libasync/async/async.hpp>
 
 /** @brief The namespace of the Async Library project */
 namespace libasync {
@@ -6,18 +13,18 @@ namespace libasync {
 namespace async {
 
 handle_t connect(std::size_t bulk) {
-  (void) bulk;
-    return nullptr;
+  (void)bulk;
+  return nullptr;
 }
 
-void receive(handle_t handle, const char *data, std::size_t size) {
-  (void) handle;
-  (void) data;
-  (void) size;
+void receive(handle_t handle, const char* data, std::size_t size) {
+  (void)handle;
+  (void)data;
+  (void)size;
 }
 
 void disconnect(handle_t handle) {
-  (void) handle;
+  (void)handle;
 }
 
 } /* async:: */
