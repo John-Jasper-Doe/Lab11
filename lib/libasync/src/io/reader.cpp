@@ -10,8 +10,8 @@
 
 #include <libasync/io/reader.hpp>
 
-/** @brief The namespace of the BULKMT project */
-namespace bulkmt {
+/** @brief The namespace of the Async Library project */
+namespace libasync {
 /** @brief The namespace of the IO */
 namespace io {
 
@@ -27,4 +27,4 @@ void reader::read_cycle() {
 }
 
 } /* io:: */
-} /* bulkmt:: */
+} /* libasync:: */

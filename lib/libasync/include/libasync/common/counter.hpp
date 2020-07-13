@@ -18,8 +18,8 @@
 #include <string>
 #include <vector>
 
-/** @brief The namespace of the BULKMT project */
-namespace bulkmt {
+/** @brief The namespace of the Async Library project */
+namespace libasync {
 /** @brief The namespace of the Common */
 namespace common {
 
@@ -102,6 +102,6 @@ inline counter operator-(counter& lhs, const counter& rhs) {
 }
 
 } /* common:: */
-} /* bulkmt:: */
+} /* libasync:: */
 
 #endif /* COUNTER_HPP_ */

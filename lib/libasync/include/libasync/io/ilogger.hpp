@@ -12,8 +12,8 @@
 #ifndef ILOGGER_HPP_
 #define ILOGGER_HPP_
 
-/** @brief The namespace of the BULKMT project */
-namespace bulkmt {
+/** @brief The namespace of the Async Library project */
+namespace libasync {
 
 /** @brief The namespace of the Common */
 namespace common {
@@ -39,6 +39,6 @@ public:
 };
 
 } /* io:: */
-} /* bulkmt:: */
+} /* libasync:: */
 
 #endif /* ILOGGER_HPP_ */

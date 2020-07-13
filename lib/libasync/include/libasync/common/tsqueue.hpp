@@ -20,8 +20,8 @@
 #include <condition_variable>
 #include <mutex>
 
-/** @brief The namespace of the BULKMT project */
-namespace bulkmt {
+/** @brief The namespace of the Async Library project */
+namespace libasync {
 /** @brief The namespace of the Common */
 namespace common {
 
@@ -178,6 +178,6 @@ protected:
 };
 
 } /* common:: */
-} /* bulkmt:: */
+} /* libasync:: */
 
 #endif /* TSQUEUE_HPP_ */

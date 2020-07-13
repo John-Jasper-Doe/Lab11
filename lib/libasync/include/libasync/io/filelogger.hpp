@@ -18,18 +18,18 @@
 #include <libasync/common/counter.hpp>
 #include <libasync/io/ilogger.hpp>
 
-/** @brief The namespace of the BULKMT project */
-namespace bulkmt {
+/** @brief The namespace of the Async Library project */
+namespace libasync {
 /** @brief The namespace of the IO */
 namespace io {
 
 using time_point_t = std::chrono::time_point<std::chrono::system_clock>;
 
 /** @brief Logger for print bulk in file and console. */
-class filelogger final : public bulkmt::io::ilogger {
+class filelogger final : public libasync::io::ilogger {
   std::string str_;
   time_point_t time_point_;
-  bulkmt::common::counter cnt_;
+  libasync::common::counter cnt_;
 
 public:
   /**
@@ -39,7 +39,7 @@ public:
    * @param [in] cnt - counter for accounting.
    */
   explicit filelogger(const std::string& str, time_point_t time_point,
-                      const bulkmt::common::counter& cnt) noexcept;
+                      const libasync::common::counter& cnt) noexcept;
 
   /** @brief The default distructor. */
   virtual ~filelogger() noexcept override;
@@ -48,10 +48,10 @@ public:
    * @brief start
    * @return Counter for accounting.
    */
-  virtual bulkmt::common::counter start() noexcept override;
+  virtual libasync::common::counter start() noexcept override;
 };
 
 } /* io:: */
-} /* bulkmt:: */
+} /* libasync:: */
 
 #endif /* FILELOGGER_HPP_ */

@@ -22,8 +22,8 @@
 #include <libasync/io/ireader.hpp>
 #include <libasync/utils/observer.hpp>
 
-/** @brief The namespace of the BULKMT project */
-namespace bulkmt {
+/** @brief The namespace of the Async Library project */
+namespace libasync {
 /** @brief The namespace of the Core */
 namespace core {
 
@@ -94,6 +94,6 @@ public:
 };
 
 } /* core:: */
-} /* bulkmt:: */
+} /* libasync:: */
 
 #endif /* CONTROLLER_HPP_ */

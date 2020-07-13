@@ -25,8 +25,8 @@
 #include "counter.hpp"
 #include "tsqueue.hpp"
 
-/** @brief The namespace of the BULKMT project */
-namespace bulkmt {
+/** @brief The namespace of the Async Library project */
+namespace libasync {
 /** @brief The namespace of the Common */
 namespace common {
 
@@ -137,7 +137,7 @@ public:
   /**
    * @brief Push
    * @tparam [in] T - The type of task to add.
-   * @param [in] f - Pointer to a function of the form: bulkmt::common::counter()
+   * @param [in] f - Pointer to a function of the form: libasync::common::counter()
    * @details
    * The function takes a pointer to a function of a given type. Wraps in
    * lambda and puts in line.
@@ -223,6 +223,6 @@ protected:
 };
 
 } /* common:: */
-} /* bulkmt:: */
+} /* libasync:: */
 
 #endif /* TASKPOOL_HPP_ */

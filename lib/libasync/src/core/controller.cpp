@@ -13,8 +13,8 @@
 #include <libasync/io/conlogger.hpp>
 #include <libasync/io/filelogger.hpp>
 
-/** @brief The namespace of the BULKMT project */
-namespace bulkmt {
+/** @brief The namespace of the Async Library project */
+namespace libasync {
 /** @brief The namespace of the Core */
 namespace core {
 
@@ -101,4 +101,4 @@ void controller::flush() {
 }
 
 } /* core:: */
-} /* bulkmt:: */
+} /* libasync:: */

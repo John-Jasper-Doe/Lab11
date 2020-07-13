@@ -8,8 +8,8 @@
 
 #include <libasync/io/conlogger.hpp>
 
-/** @brief The namespace of the BULKMT project */
-namespace bulkmt {
+/** @brief The namespace of the Async Library project */
+namespace libasync {
 /** @brief The namespace of the IO */
 namespace io {
 
@@ -25,4 +25,4 @@ common::counter conlogger::start() noexcept {
 }
 
 } /* io:: */
-} /* bulkmt:: */
+} /* libasync:: */

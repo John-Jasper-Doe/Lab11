@@ -8,8 +8,8 @@
 
 #include <libasync/common/counter.hpp>
 
-/** @brief The namespace of the BULKMT project */
-namespace bulkmt {
+/** @brief The namespace of the Async Library project */
+namespace libasync {
 /** @brief The namespace of the Common */
 namespace common {
 
@@ -36,4 +36,4 @@ std::string counter::as_str(bool allow_strings_cnt) noexcept {
 }
 
 } /* common:: */
-} /* bulkmt:: */
+} /* libasync:: */

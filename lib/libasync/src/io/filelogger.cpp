@@ -13,13 +13,13 @@
 
 #include <libasync/io/filelogger.hpp>
 
-/** @brief The namespace of the BULKMT project */
-namespace bulkmt {
+/** @brief The namespace of the Async Library project */
+namespace libasync {
 /** @brief The namespace of the IO */
 namespace io {
 
 filelogger::filelogger(const std::string& str, time_point_t time_point,
-                       const bulkmt::common::counter& cnt) noexcept
+                       const libasync::common::counter& cnt) noexcept
   : str_(std::move(str)), time_point_(time_point), cnt_(cnt) {}
 
 filelogger::~filelogger() noexcept {}
@@ -41,4 +41,4 @@ common::counter filelogger::start() noexcept {
 }
 
 } /* io:: */
-} /* bulkmt:: */
+} /* libasync:: */

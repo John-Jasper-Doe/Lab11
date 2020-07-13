@@ -22,8 +22,8 @@
 
 #include "observer.hpp"
 
-/** @brief The namespace of the BULKMT project */
-namespace bulkmt {
+/** @brief The namespace of the Async Library project */
+namespace libasync {
 /** @brief The namespace of the Utils */
 namespace utils {
 
@@ -82,6 +82,6 @@ protected:
 };
 
 } /* utils:: */
-} /* bulkmt:: */
+} /* libasync:: */
 
 #endif /* SUBJECT_HPP_ */

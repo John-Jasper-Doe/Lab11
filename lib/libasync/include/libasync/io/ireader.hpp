@@ -13,8 +13,8 @@
 
 #include <libasync/utils/subject.hpp>
 
-/** @brief The namespace of the BULKMT project */
-namespace bulkmt {
+/** @brief The namespace of the Async Library project */
+namespace libasync {
 /** @brief The namespace of the IO */
 namespace io {
 
@@ -24,6 +24,6 @@ public:
 };
 
 } /* io:: */
-} /* bulkmt:: */
+} /* libasync:: */
 
 #endif /* IREADER_HPP_ */

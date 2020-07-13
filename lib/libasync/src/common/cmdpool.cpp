@@ -8,8 +8,8 @@
 
 #include <libasync/common/cmdpool.hpp>
 
-/** @brief The namespace of the BULKMT project */
-namespace bulkmt {
+/** @brief The namespace of the Async Library project */
+namespace libasync {
 /** @brief The namespace of the Common */
 namespace common {
 
@@ -46,4 +46,4 @@ void cmd_pool::clear() {
 }
 
 } /* common:: */
-} /* bulkmt:: */
+} /* libasync:: */
