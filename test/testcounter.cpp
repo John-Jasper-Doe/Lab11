@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
-#include "common/counter.hpp"
+#include <libasync/common/counter.hpp>
 
 TEST(test_counter, test_inc) {
-  bulkmt::common::counter cnt;
+  libasync::common::counter cnt;
 
   cnt.inc_blk();
   cnt.inc_cmd();

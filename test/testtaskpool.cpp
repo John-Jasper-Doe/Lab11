@@ -1,22 +1,22 @@
 #include <gtest/gtest.h>
 #include <ostream>
-#include "common/counter.hpp"
-#include "common/taskpool.hpp"
-#include "io/ilogger.hpp"
+#include <libasync/common/counter.hpp>
+#include <libasync/common/taskpool.hpp>
+#include <libasync/io/ilogger.hpp>
 
-class test_loger : public bulkmt::io::ilogger {
+class test_loger : public libasync::io::ilogger {
   std::ostream& ostrm_;
   std::string str_;
-  bulkmt::common::counter cnt_;
+  libasync::common::counter cnt_;
 
 public:
   explicit test_loger(std::ostream& ostrm, const std::string& str,
-                      const bulkmt::common::counter& cnt) noexcept
+                      const libasync::common::counter& cnt) noexcept
     : ostrm_(ostrm), str_(std::move(str)), cnt_(cnt) {}
 
   virtual ~test_loger() noexcept override {}
 
-  bulkmt::common::counter start() noexcept override {
+  libasync::common::counter start() noexcept override {
     ostrm_ << str_ << '\n';
     return cnt_;
   }
@@ -24,13 +24,13 @@ public:
 
 TEST(test_taskpool, test_taskpool1) {
   std::stringstream ss;
-  bulkmt::common::taskpool<3> tp("group_test");
+  libasync::common::taskpool<3> tp("group_test");
   tp.start();
 
-  bulkmt::common::counter cnt1;
-  bulkmt::common::counter cnt2;
-  bulkmt::common::counter cnt3;
-  bulkmt::common::counter cnt4;
+  libasync::common::counter cnt1;
+  libasync::common::counter cnt2;
+  libasync::common::counter cnt3;
+  libasync::common::counter cnt4;
 
   cnt1.inc_blk();
   cnt2.inc_str();

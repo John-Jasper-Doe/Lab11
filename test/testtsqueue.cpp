@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
-#include "common/tsqueue.hpp"
+#include <libasync/common/tsqueue.hpp>
 
 TEST(test_tsqueue, test_pop_push1) {
-  bulkmt::common::tsqueue<int> queue;
+  libasync::common::tsqueue<int> queue;
 
   ASSERT_EQ(queue.empty(), true);
 
@@ -23,7 +23,7 @@ TEST(test_tsqueue, test_pop_push1) {
 }
 
 TEST(test_tsqueue, test_pop_push2) {
-  bulkmt::common::tsqueue<int> queue;
+  libasync::common::tsqueue<int> queue;
 
   ASSERT_EQ(queue.empty(), true);
 

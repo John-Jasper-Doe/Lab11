@@ -12,7 +12,7 @@ endfunction()
 function(addtest TESTNAME FIRSTSOURCE)
   add_executable(${TESTNAME} main.cpp ${FIRSTSOURCE} ${ARGN})
   target_include_directories(${TESTNAME} PRIVATE ${CMAKE_SOURCE_DIR}/src)
-  target_link_libraries(${TESTNAME} gtest)
+  target_link_libraries(${TESTNAME} gtest ${PROJECT_NAME})
   add_test(
     NAME ${TESTNAME}
     COMMAND ${CMAKE_COMMAND} --build . --target ${TESTNAME}

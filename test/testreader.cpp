@@ -1,16 +1,17 @@
 #include <gtest/gtest.h>
 #include <iostream>
-#include "io/reader.hpp"
-#include "utils/observer.hpp"
 
-class test_observer final : public bulkmt::utils::observer<std::string>,
+#include <libasync/io/reader.hpp>
+#include <libasync/utils/observer.hpp>
+
+class test_observer final : public libasync::utils::observer<std::string>,
                             public std::enable_shared_from_this<test_observer> {
   std::stringstream& output_;
-  std::unique_ptr<bulkmt::io::ireader> reader_;
+  std::unique_ptr<libasync::io::ireader> reader_;
 
 public:
   explicit test_observer(std::stringstream& out,
-                         std::unique_ptr<bulkmt::io::ireader> reader) noexcept
+                         std::unique_ptr<libasync::io::ireader> reader) noexcept
     : output_(out), reader_(std::move(reader)) {}
 
   void update(const std::string& str) noexcept override {
@@ -37,14 +38,14 @@ protected:
   std::unique_ptr<std::stringstream> output;
   std::unique_ptr<std::stringstream> expected;
 
-  std::unique_ptr<bulkmt::io::ireader> rd;
+  std::unique_ptr<libasync::io::ireader> rd;
   std::shared_ptr<test_observer> tst_obs;
 
   void SetUp() override {
     input = std::make_unique<std::stringstream>();
     output = std::make_unique<std::stringstream>();
     expected = std::make_unique<std::stringstream>();
-    rd = std::make_unique<bulkmt::io::reader>(*input);
+    rd = std::make_unique<libasync::io::reader>(*input);
     tst_obs = std::make_shared<test_observer>(*output, std::move(rd));
   }
 

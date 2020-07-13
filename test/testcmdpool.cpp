@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
-#include "common/cmdpool.hpp"
+#include <libasync/common/cmdpool.hpp>
 
 TEST(test_cmd_pool, test_size) {
-  bulkmt::common::cmd_pool pool;
+  libasync::common::cmd_pool pool;
   ASSERT_EQ(pool.size(), 0);
 
   pool.add("cmd1");
@@ -16,7 +16,7 @@ TEST(test_cmd_pool, test_size) {
 }
 
 TEST(test_cmd_pool, test_as_str) {
-  bulkmt::common::cmd_pool pool;
+  libasync::common::cmd_pool pool;
   pool.add("cmd1");
   pool.add("cmd2");
   pool.add("cmd3");

@@ -38,12 +38,10 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 set(LIBRARY_INCLUDE_PATH ${CMAKE_SOURCE_DIR}/lib/libasync/include)
 include_directories(${LIBRARY_INCLUDE_PATH})
 
-include_directories(${LIBRARY_INCLUDE_PATH})
-
 # Setting options on project
 option(CLANG_FORMAT "Enable clang-format target" OFF)
 option(DOCUMENTATION "Build documentation" ON)
-option(TESTING "Build tests" OFF)
+option(TESTING "Build tests" ON)
 
 if(CLANG_FORMAT)
   include(clang-format)
