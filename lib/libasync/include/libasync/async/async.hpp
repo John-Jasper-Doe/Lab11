@@ -16,7 +16,7 @@ namespace libasync {
 namespace async {
 
 /** @brief Alias of the handler of type */
-using handle_t = void *;
+using handle_t = void*;
 
 /**
  * @brief Create new execution
@@ -31,7 +31,7 @@ handle_t connect(std::size_t bulk);
  * @param [in] data - pointer on data.
  * @param [in] size - size data.
  */
-void receive(handle_t handle, const char *data, std::size_t size);
+void receive(handle_t handle, const char* data, std::size_t size);
 
 /**
  * @brief Destroy the context.

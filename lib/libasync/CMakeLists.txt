@@ -10,7 +10,10 @@ target_link_libraries(${PROJECT_NAME}
   pthread
 )
 
-set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER ${LIBRARY_INCLUDE_PATH}/async/async.h)
+set_target_properties(
+  ${PROJECT_NAME}
+  PROPERTIES
+    PUBLIC_HEADER ${LIBRARY_INCLUDE_PATH}/async/async.hpp)
 
 # install
 install(
