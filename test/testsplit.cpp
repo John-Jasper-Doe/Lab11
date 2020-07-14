@@ -1,16 +1,7 @@
 #include <gtest/gtest.h>
-#include <regex>
-#include <string>
+#include <libasync/common/split.hpp>
 
-namespace {
-
-std::vector<std::string> split(const std::string& str) {
-  std::regex ws_re("\\n+");
-  return std::vector<std::string>{std::sregex_token_iterator(str.begin(), str.end(), ws_re, -1),
-                                  std::sregex_token_iterator()};
-}
-
-} /* :: */
+using namespace libasync::common;
 
 TEST(test_split, test_split_six_elem) {
   std::vector<std::string> res = split("0\n0\n0\n0\n0\n0\n");
