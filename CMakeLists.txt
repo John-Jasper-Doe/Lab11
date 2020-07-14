@@ -19,7 +19,6 @@ if (DEFINED ENV{TRAVIS_BUILD_NUMBER})
   set(ASYNC_PATCH $ENV{TRAVIS_BUILD_NUMBER})
 endif ()
 set(ASYNC_VERSION ${ASYNC_MAJOR}.${ASYNC_MINOR}.${ASYNC_PATCH})
-set(PROJECT_VERSION ${ASYNC_VERSION})
 configure_file(version.hpp.in ${CMAKE_BINARY_DIR}/src/include/version.hpp @ONLY)
 
 ## Set property
