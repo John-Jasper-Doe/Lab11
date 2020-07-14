@@ -18,11 +18,11 @@ namespace libasync {
 /** @brief The namespace of the Core */
 namespace core {
 
-context::context(std::size_t cmd_per_block) noexcept
+context::context(std::size_t id, std::size_t cmd_per_block) noexcept
   : ostrm_stat_{std::cout}, ostrm_log_{std::cout} {
   std::unique_ptr<io::ireader> rd = std::make_unique<io::tsreader>(queue_);
   controller_ =
-      std::make_shared<core::controller>(cmd_per_block, std::move(rd), ostrm_stat_, ostrm_log_);
+      std::make_shared<core::controller>(id, cmd_per_block, std::move(rd), ostrm_stat_, ostrm_log_);
 
   worker_ = thread_ptr_t(new std::thread([this]() { controller_->start(); }),
                          [](std::thread* t) { t->join(); });

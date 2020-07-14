@@ -47,7 +47,7 @@ class context final {
 public:
   /** @brief The default constructor. */
   context() = delete;
-  explicit context(std::size_t cmd_per_block) noexcept;
+  explicit context(std::size_t id, std::size_t cmd_per_block) noexcept;
 
   /** @brief The default distructor. */
   ~context() = default;

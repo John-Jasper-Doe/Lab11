@@ -24,16 +24,17 @@ namespace {
 
 /* Context */
 static std::map<raw_context_ptr_t, context_ptr_t> contexts;
+static std::size_t context_id = 0;
 static std::mutex mtx;
 
 } /* :: */
 
 handle_t connect(std::size_t bulk) noexcept {
   try {
-    context_ptr_t ptr = std::make_unique<core::context>(bulk);
+    std::unique_lock<std::mutex> lock(mtx);
+    context_ptr_t ptr = std::make_unique<core::context>(++context_id, bulk);
     raw_context_ptr_t raw_ptr = ptr.get();
 
-    std::unique_lock<std::mutex> lock(mtx);
     contexts.emplace(std::make_pair(raw_ptr, std::move(ptr)));
     lock.unlock();
 

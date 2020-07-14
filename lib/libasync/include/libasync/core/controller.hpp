@@ -54,11 +54,14 @@ class controller final : public utils::observer<std::string>,
   std::ostream& ostrm_stat_;
   std::ostream& ostrm_log_;
 
+  std::size_t id_;
+
 public:
   /** @brief The default constructor. */
   controller() = delete;
-  explicit controller(std::size_t cmd_per_block, std::unique_ptr<io::ireader> reader,
-                      std::ostream& ostrm_stat, std::ostream& ostrm_log) noexcept;
+  explicit controller(std::size_t id, std::size_t cmd_per_block,
+                      std::unique_ptr<io::ireader> reader, std::ostream& ostrm_stat,
+                      std::ostream& ostrm_log) noexcept;
 
   /** @brief The default distructor. */
   virtual ~controller() noexcept override;

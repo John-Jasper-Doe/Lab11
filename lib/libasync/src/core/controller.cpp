@@ -18,13 +18,15 @@ namespace libasync {
 /** @brief The namespace of the Core */
 namespace core {
 
-controller::controller(std::size_t cmd_per_block, std::unique_ptr<io::ireader> reader,
-                       std::ostream& ostrm_stat, std::ostream& ostrm_log) noexcept
+controller::controller(std::size_t id, std::size_t cmd_per_block,
+                       std::unique_ptr<io::ireader> reader, std::ostream& ostrm_stat,
+                       std::ostream& ostrm_log) noexcept
   : commands_per_block_(cmd_per_block)
   , pool_(std::make_unique<common::cmd_pool>())
   , reader_(std::move(reader))
   , ostrm_stat_(ostrm_stat)
-  , ostrm_log_(ostrm_log) {}
+  , ostrm_log_(ostrm_log)
+  , id_{id} {}
 
 controller::~controller() noexcept {
   if (pool_->size() > 0 && depth_ == 0)
@@ -34,7 +36,7 @@ controller::~controller() noexcept {
   console_pool_.stop();
   file_pool_.stop();
 
-  ostrm_stat_ << "All stats: " << counter_.as_str(true) << std::endl;
+  ostrm_stat_ << "[" << id_ << "]: All stats: " << counter_.as_str(true) << std::endl;
   ostrm_stat_ << console_pool_.count_as_str() << std::endl;
   ostrm_stat_ << file_pool_.count_as_str() << std::endl;
 }
