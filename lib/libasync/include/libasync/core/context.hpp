@@ -17,6 +17,7 @@
 #include <string>
 #include <thread>
 
+#include <libasync/common/tsqueue.hpp>
 #include <libasync/core/controller.hpp>
 
 /** @brief The namespace of the Async Library project */
@@ -26,13 +27,22 @@ namespace core {
 
 /** @brief The controller is a class "Observer" */
 class context final {
-  /** @brief the count commands per block. */
-  std::size_t cmd_per_block_{0};
+  /** @brief Thread poll alias. */
+  using thread_ptr_t = std::unique_ptr<std::thread, std::function<void(std::thread*)>>;
+  /** @brief Alias of the thread-safe queue of type. */
+  using tsqueue_t = common::tsqueue<std::string>;
+
+  //  /** @brief the count commands per block. */
+  //  std::size_t cmd_per_block_{0};
 
   std::shared_ptr<libasync::core::controller> controller_;
 
   /** @brief "Workhorse" context. */
-  std::thread worker_;
+  thread_ptr_t worker_;
+
+  tsqueue_t queue_;
+  std::ostream& ostrm_stat_;
+  std::ostream& ostrm_log_;
 
 public:
   /** @brief The default constructor. */
@@ -48,7 +58,7 @@ public:
   context(const context&) = delete;
   context& operator=(const context&) = delete;
 
-  void input(const std::string&);
+  void input(const std::string& str);
 };
 
 } /* core:: */
