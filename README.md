@@ -3,7 +3,6 @@
 [ ![Download](https://api.bintray.com/packages/john-jasper-doe/otus-cpp/homeworks/images/download.svg?version=async) ](https://bintray.com/john-jasper-doe/otus-cpp/homeworks/async/link)
 
 
-
 ## Otus Developer C++ Course
 Homework "ASYNC"
 
