@@ -13,7 +13,7 @@ target_link_libraries(${PROJECT_NAME}
 set_target_properties(
   ${PROJECT_NAME}
   PROPERTIES
-    PUBLIC_HEADER ${LIBRARY_INCLUDE_PATH}/async/async.hpp)
+    PUBLIC_HEADER ${LIBRARY_INCLUDE_PATH}/libasync/async/async.hpp)
 
 # install
 install(
