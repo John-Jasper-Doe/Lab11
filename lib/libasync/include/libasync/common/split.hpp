@@ -36,7 +36,6 @@ inline std::vector<std::string> split(const std::string& str) {
                                   std::sregex_token_iterator()};
 }
 
-
 } /* common:: */
 } /* libasync:: */
 

@@ -5,8 +5,8 @@
  * @date 2020
  */
 
-#include <memory>
 #include <map>
+#include <memory>
 #include <mutex>
 
 #include <libasync/async/async.hpp>
