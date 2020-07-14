@@ -59,6 +59,7 @@ public:
   context& operator=(const context&) = delete;
 
   void input(const std::string& str);
+  void stop_wait() noexcept;
 };
 
 } /* core:: */

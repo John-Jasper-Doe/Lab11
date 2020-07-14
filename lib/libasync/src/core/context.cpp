@@ -21,11 +21,11 @@ namespace core {
 context::context(std::size_t cmd_per_block) noexcept
   : ostrm_stat_{std::cout}, ostrm_log_{std::cout} {
   std::unique_ptr<io::ireader> rd = std::make_unique<io::tsreader>(queue_);
-  std::shared_ptr<core::controller> controller_ =
+  controller_ =
       std::make_shared<core::controller>(cmd_per_block, std::move(rd), ostrm_stat_, ostrm_log_);
 
-  auto l_func = [this]() { this->controller_->start(); };
-  worker_ = thread_ptr_t(new std::thread(l_func), [](std::thread* t) { t->join(); });
+  worker_ = thread_ptr_t(new std::thread([this]() { controller_->start(); }),
+                         [](std::thread* t) { t->join(); });
 }
 
 void context::input(const std::string& str) {
@@ -34,6 +34,12 @@ void context::input(const std::string& str) {
   for (std::string& line : lines) {
     queue_.push(std::move(line));
   }
+}
+
+void context::stop_wait() noexcept {
+  while (!queue_.empty()) {
+  }
+  controller_->stop();
 }
 
 } /* core:: */

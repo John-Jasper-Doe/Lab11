@@ -58,8 +58,15 @@ void disconnect(handle_t handle) noexcept {
   std::unique_lock<std::mutex> lock(mtx);
 
   auto it = contexts.find(reinterpret_cast<raw_context_ptr_t>(handle));
-  if (it != contexts.end())
+  if (it != contexts.end()) {
+    lock.unlock();
+
+    it->second->stop_wait();
+    it->second.reset();
+
+    lock.lock();
     contexts.erase(it);
+  }
 }
 
 } /* async:: */

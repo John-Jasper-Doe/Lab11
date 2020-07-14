@@ -30,6 +30,7 @@ controller::~controller() noexcept {
   if (pool_->size() > 0 && depth_ == 0)
     flush();
 
+  stop();
   console_pool_.stop();
   file_pool_.stop();
 
@@ -47,6 +48,10 @@ void controller::start() {
   reader_->attach(weak_ptr);
   reader_->read_cycle();
   reader_->detach(weak_ptr);
+}
+
+void controller::stop() noexcept {
+  reader_->stop_cycle();
 }
 
 void controller::update(const std::string& str) {
