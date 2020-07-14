@@ -19,6 +19,7 @@ if (DEFINED ENV{TRAVIS_BUILD_NUMBER})
   set(ASYNC_PATCH $ENV{TRAVIS_BUILD_NUMBER})
 endif ()
 set(ASYNC_VERSION ${ASYNC_MAJOR}.${ASYNC_MINOR}.${ASYNC_PATCH})
+set(PROJECT_VERSION ${ASYNC_MAJOR}.${ASYNC_MINOR}.${ASYNC_PATCH})
 configure_file(version.hpp.in ${CMAKE_BINARY_DIR}/src/include/version.hpp @ONLY)
 
 ## Set property
@@ -31,7 +32,12 @@ include(print)
 include(function)
 include(GNUInstallDirs)
 
-project(${PROJECT_NAME} CXX)
+project(
+  ${PROJECT_NAME}
+  VERSION ${PROJECT_VERSION}
+  DESCRIPTION ${PROJECT_DESCRIPTION}
+  LANGUAGES CXX
+)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 set(LIBRARY_INCLUDE_PATH ${CMAKE_SOURCE_DIR}/lib/libasync/include)
