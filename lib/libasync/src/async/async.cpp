@@ -54,8 +54,12 @@ void receive(handle_t handle, const char* data, std::size_t size) noexcept {
   }
 }
 
-void disconnect(handle_t handle) {
-  (void)handle;
+void disconnect(handle_t handle) noexcept {
+  std::unique_lock<std::mutex> lock(mtx);
+
+  auto it = contexts.find(reinterpret_cast<raw_context_ptr_t>(handle));
+  if (it != contexts.end())
+    contexts.erase(it);
 }
 
 } /* async:: */

@@ -37,7 +37,7 @@ void receive(handle_t handle, const char* data, std::size_t size) noexcept;
  * @brief Destroy the context.
  * @param [in] handle - the context pointer.
  */
-void disconnect(handle_t handle);
+void disconnect(handle_t handle) noexcept;
 
 } /* async:: */
 } /* libasync:: */
