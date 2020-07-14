@@ -26,5 +26,7 @@ void reader::read_cycle() {
   }
 }
 
+void reader::stop_cycle() {}
+
 } /* io:: */
 } /* libasync:: */

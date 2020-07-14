@@ -71,6 +71,7 @@ public:
 
   /** @brief Start the process of receiving data. */
   void start();
+  void stop() noexcept;
 
   /** @brief Resetting data from the command pool. */
   void flush();

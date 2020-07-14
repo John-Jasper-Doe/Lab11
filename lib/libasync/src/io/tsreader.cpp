@@ -21,10 +21,17 @@ tsreader::~tsreader() noexcept {}
 
 void tsreader::read_cycle() {
   while (!stopped_) {
-    std::string res = *queue_.wait_and_pop();
-    if (!res.empty())
-      notify(res);
+    std::string res{""};
+
+    if (queue_.try_pop(res)) {
+      if (!res.empty())
+        notify(res);
+    }
   }
+}
+
+void tsreader::stop_cycle() {
+  stopped_ = true;
 }
 
 } /* io:: */

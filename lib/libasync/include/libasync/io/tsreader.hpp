@@ -50,6 +50,7 @@ public:
 
   /** @brief Loop to read data from the input stream. */
   virtual void read_cycle() override;
+  virtual void stop_cycle() override;
 };
 
 } /* io:: */

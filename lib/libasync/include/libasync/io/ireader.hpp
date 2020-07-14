@@ -21,6 +21,7 @@ namespace io {
 class ireader : public utils::subject<std::string> {
 public:
   virtual void read_cycle() = 0;
+  virtual void stop_cycle() = 0;
 };
 
 } /* io:: */
