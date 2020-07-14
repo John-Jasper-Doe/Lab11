@@ -27,7 +27,7 @@ namespace core {
 /** @brief The controller is a class "Observer" */
 class context final {
   /** @brief the count commands per block. */
-  std::size_t com_per_block_{0};
+  std::size_t cmd_per_block_{0};
 
   std::shared_ptr<libasync::core::controller> controller_;
 

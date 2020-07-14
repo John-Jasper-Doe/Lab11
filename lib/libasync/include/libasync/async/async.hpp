@@ -23,7 +23,7 @@ using handle_t = void*;
  * @param [in] bulk  - the number of commands in the block.
  * @return context pointer.
  */
-handle_t connect(std::size_t bulk);
+handle_t connect(std::size_t bulk) noexcept;
 
 /**
  * @brief Write data to a given context.
@@ -31,7 +31,7 @@ handle_t connect(std::size_t bulk);
  * @param [in] data - pointer on data.
  * @param [in] size - size data.
  */
-void receive(handle_t handle, const char* data, std::size_t size);
+void receive(handle_t handle, const char* data, std::size_t size) noexcept;
 
 /**
  * @brief Destroy the context.

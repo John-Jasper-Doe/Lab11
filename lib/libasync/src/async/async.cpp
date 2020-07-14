@@ -28,21 +28,30 @@ static std::mutex mtx;
 
 } /* :: */
 
-handle_t connect(std::size_t bulk) {
-  context_ptr_t ptr = std::make_unique<core::context>(bulk);
-  raw_context_ptr_t raw_ptr = ptr.get();
+handle_t connect(std::size_t bulk) noexcept {
+  try {
+    context_ptr_t ptr = std::make_unique<core::context>(bulk);
+    raw_context_ptr_t raw_ptr = ptr.get();
 
-  std::unique_lock<std::mutex> lock(mtx);
-  contexts.emplace(std::make_pair(raw_ptr, std::move(ptr)));
-  lock.unlock();
+    std::unique_lock<std::mutex> lock(mtx);
+    contexts.emplace(std::make_pair(raw_ptr, std::move(ptr)));
+    lock.unlock();
 
-  return reinterpret_cast<handle_t>(raw_ptr);
+    return reinterpret_cast<handle_t>(raw_ptr);
+  }
+  catch (std::bad_alloc&) {
+    return nullptr;
+  }
 }
 
-void receive(handle_t handle, const char* data, std::size_t size) {
-  (void)handle;
-  (void)data;
-  (void)size;
+void receive(handle_t handle, const char* data, std::size_t size) noexcept {
+  std::unique_lock<std::mutex> lock(mtx);
+
+  auto it = contexts.find(reinterpret_cast<raw_context_ptr_t>(handle));
+  if (it != contexts.end()) {
+    lock.unlock();
+    it->second->input(std::string(data, size));
+  }
 }
 
 void disconnect(handle_t handle) {
