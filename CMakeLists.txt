@@ -68,8 +68,8 @@ if (TESTING)
 endif()
 
 # Added directory
-#add_subdirectory(src)
 add_subdirectory(lib)
+add_subdirectory(src)
 
 configure_file(async.pc.in ${CMAKE_CURRENT_BINARY_DIR}/async.pc @ONLY)
 install(FILES ${CMAKE_BINARY_DIR}/async.pc DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/pkgconfig)
