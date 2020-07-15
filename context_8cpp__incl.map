@@ -1,0 +1,13 @@
+<map id="lib/libasync/src/core/context.cpp" name="lib/libasync/src/core/context.cpp">
+<area shape="rect" id="node4" href="$split_8hpp.html" title="Implementation of various split functions. " alt="" coords="209,95,401,121"/>
+<area shape="rect" id="node7" href="$context_8hpp.html" title="Discription of the class &quot;Context&quot;. " alt="" coords="793,95,979,121"/>
+<area shape="rect" id="node27" href="$tsreader_8hpp.html" title="Discription of the class &quot;TsReader&quot;. " alt="" coords="729,169,902,196"/>
+<area shape="rect" id="node10" href="$tsqueue_8hpp.html" title="Implementation of the class &quot;TSQueue&quot;. " alt="" coords="1334,319,1553,345"/>
+<area shape="rect" id="node13" href="$controller_8hpp.html" title="Discription of the class &quot;Controller&quot;. " alt="" coords="508,169,704,196"/>
+<area shape="rect" id="node14" href="$cmdpool_8hpp.html" title="Discription of the class &quot;cmd_pool&quot;. " alt="" coords="441,319,662,345"/>
+<area shape="rect" id="node18" href="$counter_8hpp.html" title="Discription of the class &quot;counter&quot;. " alt="" coords="687,319,901,345"/>
+<area shape="rect" id="node19" href="$taskpool_8hpp.html" title="Task pool implementation. " alt="" coords="1480,244,1700,271"/>
+<area shape="rect" id="node23" href="$ireader_8hpp.html" title="Discription of the interface class &quot;IReader&quot;. " alt="" coords="711,244,875,271"/>
+<area shape="rect" id="node26" href="$observer_8hpp.html" title="Discription of the template class &quot;Observer&quot;. " alt="" coords="1239,393,1344,420"/>
+<area shape="rect" id="node24" href="$subject_8hpp.html" title="Discription of the template class &quot;Subject&quot;. " alt="" coords="1078,319,1259,345"/>
+</map>

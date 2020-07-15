@@ -1,0 +1,18 @@
+<map id="libasync::core::controller" name="libasync::core::controller">
+<area shape="rect" id="node2" href="$classlibasync_1_1utils_1_1observer.html" title="libasync::utils::observer\l\&lt; std::string \&gt;" alt="" coords="1226,5,1397,47"/>
+<area shape="rect" id="node5" href="$classlibasync_1_1common_1_1cmd__pool.html" title="The &quot;cmd_pool&quot; class. " alt="" coords="836,633,1044,659"/>
+<area shape="rect" id="node7" title="STL class. " alt="" coords="241,486,328,513"/>
+<area shape="rect" id="node10" href="$classlibasync_1_1common_1_1taskpool.html" title="libasync::common::taskpool\&lt; 4 \&gt;" alt="" coords="1192,449,1431,475"/>
+<area shape="rect" id="node23" href="$classlibasync_1_1common_1_1taskpool.html" title="libasync::common::taskpool\&lt; 1 \&gt;" alt="" coords="1192,335,1431,362"/>
+<area shape="rect" id="node8" title="STL class. " alt="" coords="5,479,143,520"/>
+<area shape="rect" id="node9" href="$classlibasync_1_1common_1_1counter.html" title="The &quot;counter&quot; class. " alt="" coords="500,166,695,193"/>
+<area shape="rect" id="node11" href="$classlibasync_1_1common_1_1tsqueue.html" title="libasync::common::tsqueue\l\&lt; task_t * \&gt;" alt="" coords="841,560,1039,601"/>
+<area shape="rect" id="node12" href="$structlibasync_1_1common_1_1detail_1_1node.html" title="libasync::common::detail\l::node\&lt; task_t * \&gt;" alt="" coords="507,655,688,696"/>
+<area shape="rect" id="node14" href="$structlibasync_1_1common_1_1detail_1_1node.html" title="Representation of a queue node. " alt="" coords="507,720,688,761"/>
+<area shape="rect" id="node20" href="$classlibasync_1_1io_1_1ireader.html" title="libasync::io::ireader" alt="" coords="867,710,1013,737"/>
+<area shape="rect" id="node21" href="$classlibasync_1_1utils_1_1subject.html" title="libasync::utils::subject\l\&lt; std::string \&gt;" alt="" coords="517,785,678,827"/>
+<area shape="rect" id="node24" title="STL class. " alt="" coords="1259,694,1363,721"/>
+<area shape="rect" id="node25" title="STL class. " alt="" coords="868,775,1012,816"/>
+<area shape="rect" id="node26" title="STL class. " alt="" coords="513,851,681,878"/>
+<area shape="rect" id="node27" title="STL class. " alt="" coords="231,851,338,878"/>
+</map>

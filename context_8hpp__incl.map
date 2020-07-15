@@ -1,0 +1,10 @@
+<map id="lib/libasync/include/libasync/core/context.hpp" name="lib/libasync/include/libasync/core/context.hpp">
+<area shape="rect" id="node5" href="$tsqueue_8hpp.html" title="Implementation of the class &quot;TSQueue&quot;. " alt="" coords="1384,244,1603,271"/>
+<area shape="rect" id="node8" href="$controller_8hpp.html" title="Discription of the class &quot;Controller&quot;. " alt="" coords="653,95,849,121"/>
+<area shape="rect" id="node9" href="$cmdpool_8hpp.html" title="Discription of the class &quot;cmd_pool&quot;. " alt="" coords="72,244,293,271"/>
+<area shape="rect" id="node13" href="$counter_8hpp.html" title="Discription of the class &quot;counter&quot;. " alt="" coords="318,244,533,271"/>
+<area shape="rect" id="node14" href="$taskpool_8hpp.html" title="Task pool implementation. " alt="" coords="967,169,1187,196"/>
+<area shape="rect" id="node18" href="$ireader_8hpp.html" title="Discription of the interface class &quot;IReader&quot;. " alt="" coords="473,169,637,196"/>
+<area shape="rect" id="node21" href="$observer_8hpp.html" title="Discription of the template class &quot;Observer&quot;. " alt="" coords="718,319,823,345"/>
+<area shape="rect" id="node19" href="$subject_8hpp.html" title="Discription of the template class &quot;Subject&quot;. " alt="" coords="557,244,739,271"/>
+</map>
